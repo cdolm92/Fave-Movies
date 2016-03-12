@@ -116,7 +116,7 @@
         <!--Add Movie-->
         <scene sceneID="lkJ-Ya-2O5">
             <objects>
-                <viewController id="PFE-zQ-dMn" sceneMemberID="viewController">
+                <viewController id="PFE-zQ-dMn" customClass="CreateMoviePostVC" customModule="FavoriteMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FPd-5L-OF2"/>
                         <viewControllerLayoutGuide type="bottom" id="Bi5-Be-sEK"/>
@@ -144,7 +144,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-border" translatesAutoresizingMaskIntoConstraints="NO" id="MAq-ff-gzV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-border" translatesAutoresizingMaskIntoConstraints="NO" id="MAq-ff-gzV">
                                 <rect key="frame" x="218" y="79" width="163" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="212" id="O97-Zu-hik"/>
@@ -173,6 +173,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveMoviePostBtn:" destination="PFE-zQ-dMn" eventType="touchUpInside" id="YTg-Wk-kua"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IMDB Link" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OHP-27-2PF">
                                 <rect key="frame" x="20" y="494" width="560" height="30"/>
@@ -196,6 +199,9 @@
                                 <state key="normal" title="+ Movie Poster">
                                     <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMoviePoster:" destination="PFE-zQ-dMn" eventType="touchUpInside" id="pDR-0g-7ga"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,6 +239,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Add Movie" id="gWW-xT-QfD"/>
+                    <connections>
+                        <outlet property="imdbMovieLink" destination="OHP-27-2PF" id="Ggz-9w-2Ur"/>
+                        <outlet property="movieImagePoster" destination="MAq-ff-gzV" id="nGR-vt-Yyw"/>
+                        <outlet property="movieReview" destination="CR0-vF-Ngp" id="etq-MW-Jkz"/>
+                        <outlet property="movieTitle" destination="oXo-0s-IeB" id="usJ-gx-pZ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKn-XH-pg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

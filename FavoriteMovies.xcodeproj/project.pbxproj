@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F77553AC1C93BDC4003A003C /* MoviePost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77553AA1C93BDC4003A003C /* MoviePost+CoreDataProperties.swift */; };
 		F77553AD1C93BDC4003A003C /* MoviePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77553AB1C93BDC4003A003C /* MoviePost.swift */; };
+		F77553AF1C93CA40003A003C /* CreateMoviePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77553AE1C93CA40003A003C /* CreateMoviePostVC.swift */; };
 		F780D95D1C8AA52B00A3626A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780D95C1C8AA52B00A3626A /* AppDelegate.swift */; };
 		F780D95F1C8AA52B00A3626A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780D95E1C8AA52B00A3626A /* ViewController.swift */; };
 		F780D9621C8AA52B00A3626A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F780D9601C8AA52B00A3626A /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		F77553AA1C93BDC4003A003C /* MoviePost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MoviePost+CoreDataProperties.swift"; path = "../MoviePost+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F77553AB1C93BDC4003A003C /* MoviePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviePost.swift; path = ../MoviePost.swift; sourceTree = "<group>"; };
+		F77553AE1C93CA40003A003C /* CreateMoviePostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMoviePostVC.swift; sourceTree = "<group>"; };
 		F780D9591C8AA52B00A3626A /* FavoriteMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F780D95C1C8AA52B00A3626A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F780D95E1C8AA52B00A3626A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				F780D95E1C8AA52B00A3626A /* ViewController.swift */,
+				F77553AE1C93CA40003A003C /* CreateMoviePostVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				F77553AD1C93BDC4003A003C /* MoviePost.swift in Sources */,
 				F77553AC1C93BDC4003A003C /* MoviePost+CoreDataProperties.swift in Sources */,
 				F7DE4F241C9131FF00122DB9 /* MovieCell.swift in Sources */,
+				F77553AF1C93CA40003A003C /* CreateMoviePostVC.swift in Sources */,
 				F780D95D1C8AA52B00A3626A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

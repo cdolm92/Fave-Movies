@@ -7,17 +7,37 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var moviePosts = [MoviePost]()
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
       
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        fetchAndSetResults()
+        tableView.reloadData()
+    }
+    
+    func fetchAndSetResults() {
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = app.managedObjectContext
+        let fetchedRequest = NSFetchRequest(entityName: "MoviePost")
+        
+        do {
+            let results = try context.executeFetchRequest(fetchedRequest)
+            self.moviePosts = results as! [MoviePost]
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

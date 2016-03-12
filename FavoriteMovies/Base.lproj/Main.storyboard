@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="220.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XE1-c0-njT">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imdb_logo" translatesAutoresizingMaskIntoConstraints="NO" id="XE1-c0-njT">
                                                     <rect key="frame" x="8" y="8" width="166" height="198"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="166" id="3J2-Rt-g7U"/>
@@ -92,7 +92,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favorite Movies" id="eCi-m1-agG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h2T-HN-FFC"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h2T-HN-FFC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="PFE-zQ-dMn" kind="show" id="bW0-xl-qLf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="E1R-L5-OZu" id="cL0-Tg-qNO"/>
@@ -101,6 +106,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057" y="325"/>
+        </scene>
+        <!--Add Movie-->
+        <scene sceneID="lkJ-Ya-2O5">
+            <objects>
+                <viewController id="PFE-zQ-dMn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FPd-5L-OF2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bi5-Be-sEK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o3U-JV-cV6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-0s-IeB">
+                                <rect key="frame" x="20" y="314" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Review" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CR0-vF-Ngp">
+                                <rect key="frame" x="20" y="359" width="560" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="6IA-fy-1tq"/>
+                                    <constraint firstAttribute="height" constant="70" id="Nsn-8Q-cvD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nsn-8Q-cvD"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-border" translatesAutoresizingMaskIntoConstraints="NO" id="MAq-ff-gzV">
+                                <rect key="frame" x="218" y="79" width="163" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="O97-Zu-hik"/>
+                                    <constraint firstAttribute="width" constant="154" id="tYy-Wc-7WL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="O97-Zu-hik"/>
+                                        <exclude reference="tYy-Wc-7WL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="O97-Zu-hik"/>
+                                        <include reference="tYy-Wc-7WL"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rx-NU-DiV">
+                                <rect key="frame" x="242.5" y="534" width="115" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dTw-zs-d2j"/>
+                                    <constraint firstAttribute="width" constant="115" id="gUg-9n-fzq"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IMDB Link" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OHP-27-2PF">
+                                <rect key="frame" x="20" y="494" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cbS-iK-m4W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lma-G5-wnD">
+                                <rect key="frame" x="227" y="85" width="146" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="J8b-6P-9MV">
+                                        <variation key="widthClass=compact" constant="142"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="213" id="key-CF-aHe">
+                                        <variation key="widthClass=compact" constant="191"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="+ Movie Poster">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CR0-vF-Ngp" firstAttribute="top" secondItem="oXo-0s-IeB" secondAttribute="bottom" constant="15" id="AMj-Rc-5NA"/>
+                            <constraint firstItem="MAq-ff-gzV" firstAttribute="top" secondItem="FPd-5L-OF2" secondAttribute="bottom" constant="15" id="Ea0-ns-V7D"/>
+                            <constraint firstItem="lma-G5-wnD" firstAttribute="centerY" secondItem="MAq-ff-gzV" secondAttribute="centerY" id="JLI-2A-IfU"/>
+                            <constraint firstItem="CR0-vF-Ngp" firstAttribute="leading" secondItem="o3U-JV-cV6" secondAttribute="leading" constant="20" id="NBW-2U-nKM"/>
+                            <constraint firstItem="oXo-0s-IeB" firstAttribute="top" secondItem="MAq-ff-gzV" secondAttribute="bottom" constant="10" id="Vej-UI-0tS"/>
+                            <constraint firstItem="MAq-ff-gzV" firstAttribute="centerX" secondItem="o3U-JV-cV6" secondAttribute="centerX" id="WP3-3K-32j"/>
+                            <constraint firstAttribute="trailing" secondItem="CR0-vF-Ngp" secondAttribute="trailing" constant="20" id="b7o-3q-qQo"/>
+                            <constraint firstItem="MAq-ff-gzV" firstAttribute="top" secondItem="FPd-5L-OF2" secondAttribute="bottom" constant="10" id="cL1-K9-gBu"/>
+                            <constraint firstAttribute="trailing" secondItem="oXo-0s-IeB" secondAttribute="trailing" constant="20" id="kCR-1K-ukw"/>
+                            <constraint firstAttribute="trailing" secondItem="OHP-27-2PF" secondAttribute="trailing" constant="20" id="kda-k3-QAg"/>
+                            <constraint firstItem="oXo-0s-IeB" firstAttribute="centerX" secondItem="o3U-JV-cV6" secondAttribute="centerX" id="lFO-gQ-FWb"/>
+                            <constraint firstItem="OHP-27-2PF" firstAttribute="top" secondItem="CR0-vF-Ngp" secondAttribute="bottom" constant="15" id="mCv-8f-1rK"/>
+                            <constraint firstItem="CR0-vF-Ngp" firstAttribute="centerX" secondItem="o3U-JV-cV6" secondAttribute="centerX" id="nv7-cW-UXc"/>
+                            <constraint firstItem="OHP-27-2PF" firstAttribute="leading" secondItem="o3U-JV-cV6" secondAttribute="leading" constant="20" id="o8r-6r-fAr"/>
+                            <constraint firstItem="lma-G5-wnD" firstAttribute="centerX" secondItem="MAq-ff-gzV" secondAttribute="centerX" id="oii-qq-SCF"/>
+                            <constraint firstItem="OHP-27-2PF" firstAttribute="centerX" secondItem="o3U-JV-cV6" secondAttribute="centerX" id="pwn-ni-VCk"/>
+                            <constraint firstItem="3Rx-NU-DiV" firstAttribute="centerX" secondItem="o3U-JV-cV6" secondAttribute="centerX" id="qKO-vH-DwL"/>
+                            <constraint firstItem="oXo-0s-IeB" firstAttribute="leading" secondItem="o3U-JV-cV6" secondAttribute="leading" constant="20" id="tFN-LY-8b1"/>
+                            <constraint firstItem="3Rx-NU-DiV" firstAttribute="top" secondItem="OHP-27-2PF" secondAttribute="bottom" constant="10" id="xsJ-km-GN7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cL1-K9-gBu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Ea0-ns-V7D"/>
+                                <include reference="cL1-K9-gBu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Movie" id="gWW-xT-QfD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKn-XH-pg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="325"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n0e-I0-fNy">
@@ -128,5 +258,6 @@
     </scenes>
     <resources>
         <image name="imdb_logo" width="240" height="110"/>
+        <image name="movie-border" width="163" height="225"/>
     </resources>
 </document>

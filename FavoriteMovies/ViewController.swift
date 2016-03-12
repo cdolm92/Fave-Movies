@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    var moviePosts = [MoviePost]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +20,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return MovieCell()
+        
+        if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell {
+           
+            let moviePost = moviePosts[indexPath.row]
+            cell.configureCell(moviePost)
+            return cell
+        } else {
+            return MovieCell()
+        }
+        
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -33,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return moviePosts.count
     }
     
 

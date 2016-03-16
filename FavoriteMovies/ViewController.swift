@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
       
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,10 +44,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+       
+        
         if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell {
            
             let moviePost = moviePosts[indexPath.row]
             cell.configureCell(moviePost)
+
             return cell
         } else {
             return MovieCell()

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="221" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E1R-L5-OZu">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="221" id="wqd-UU-lX7" customClass="MovieCell" customModule="FavoriteMovies" customModuleProvider="target">
@@ -28,59 +28,66 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="220.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imdb_logo" translatesAutoresizingMaskIntoConstraints="NO" id="XE1-c0-njT">
-                                                    <rect key="frame" x="8" y="8" width="166" height="198"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0af-Wh-f2W">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rmB-ka-iV9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="udQ-px-WGT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <blurEffect style="light"/>
+                                                </visualEffectView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpiritedAway Poster" translatesAutoresizingMaskIntoConstraints="NO" id="XE1-c0-njT">
+                                                    <rect key="frame" x="8" y="26" width="150" height="180"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="166" id="3J2-Rt-g7U"/>
-                                                        <constraint firstAttribute="height" constant="198" id="lwd-3s-jyx"/>
+                                                        <constraint firstAttribute="width" constant="150" id="3J2-Rt-g7U"/>
+                                                        <constraint firstAttribute="height" constant="180" id="lwd-3s-jyx"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-Wc-7s2">
-                                                    <rect key="frame" x="184" y="10" width="406" height="29"/>
+                                                    <rect key="frame" x="168" y="10" width="422" height="29"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50G-wz-al1">
-                                                    <rect key="frame" x="184" y="59" width="406" height="76"/>
+                                                    <rect key="frame" x="168" y="59" width="422" height="76"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="76" id="nWz-5p-rwi"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDb Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p4-Id-L80">
-                                                    <rect key="frame" x="259" y="165" width="331" height="20"/>
+                                                    <rect key="frame" x="168" y="165" width="422" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imdb_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kYT-Vx-wl5">
-                                                    <rect key="frame" x="184" y="150" width="65" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="6d5-Oo-L27"/>
-                                                        <constraint firstAttribute="width" constant="65" id="sPX-Aw-EfL"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="50G-wz-al1" firstAttribute="top" secondItem="A2O-Wc-7s2" secondAttribute="bottom" constant="20" id="3rJ-ww-Qda"/>
                                                 <constraint firstAttribute="trailing" secondItem="7p4-Id-L80" secondAttribute="trailing" constant="10" id="IIx-9k-IRI"/>
                                                 <constraint firstItem="A2O-Wc-7s2" firstAttribute="leading" secondItem="XE1-c0-njT" secondAttribute="trailing" constant="10" id="K0x-1w-wAf"/>
                                                 <constraint firstItem="A2O-Wc-7s2" firstAttribute="top" secondItem="Jku-VO-0ic" secondAttribute="top" constant="10" id="Owz-L8-1bO"/>
+                                                <constraint firstItem="0af-Wh-f2W" firstAttribute="top" secondItem="A2O-Wc-7s2" secondAttribute="bottom" constant="-39" id="Qok-qr-FBI"/>
+                                                <constraint firstAttribute="bottom" secondItem="0af-Wh-f2W" secondAttribute="bottom" id="RBK-h6-CZR"/>
+                                                <constraint firstItem="7p4-Id-L80" firstAttribute="leading" secondItem="XE1-c0-njT" secondAttribute="trailing" constant="10" id="UEs-qi-ftd"/>
                                                 <constraint firstAttribute="trailing" secondItem="50G-wz-al1" secondAttribute="trailing" constant="10" id="Y9G-Eb-CeC"/>
-                                                <constraint firstItem="kYT-Vx-wl5" firstAttribute="top" secondItem="50G-wz-al1" secondAttribute="bottom" constant="15" id="hu5-BV-gh8"/>
+                                                <constraint firstAttribute="trailing" secondItem="0af-Wh-f2W" secondAttribute="trailing" id="ZTf-o8-XIQ"/>
                                                 <constraint firstItem="XE1-c0-njT" firstAttribute="leading" secondItem="Jku-VO-0ic" secondAttribute="leading" constant="8" id="i6O-1U-LhA"/>
-                                                <constraint firstItem="kYT-Vx-wl5" firstAttribute="leading" secondItem="XE1-c0-njT" secondAttribute="trailing" constant="10" id="kfD-N3-n4R"/>
                                                 <constraint firstItem="50G-wz-al1" firstAttribute="leading" secondItem="XE1-c0-njT" secondAttribute="trailing" constant="10" id="mga-1B-KoP"/>
-                                                <constraint firstItem="XE1-c0-njT" firstAttribute="top" secondItem="Jku-VO-0ic" secondAttribute="top" constant="8" id="ndm-oc-MDH"/>
+                                                <constraint firstItem="XE1-c0-njT" firstAttribute="top" secondItem="Jku-VO-0ic" secondAttribute="top" constant="26" id="ndm-oc-MDH"/>
                                                 <constraint firstAttribute="trailing" secondItem="A2O-Wc-7s2" secondAttribute="trailing" constant="10" id="tUW-XF-N8b"/>
-                                                <constraint firstItem="7p4-Id-L80" firstAttribute="leading" secondItem="kYT-Vx-wl5" secondAttribute="trailing" constant="10" id="wfs-ao-wzf"/>
+                                                <constraint firstItem="0af-Wh-f2W" firstAttribute="leading" secondItem="Jku-VO-0ic" secondAttribute="leading" id="vgu-oZ-7v9"/>
                                                 <constraint firstItem="7p4-Id-L80" firstAttribute="top" secondItem="50G-wz-al1" secondAttribute="bottom" constant="30" id="zXm-Kw-OCo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellBgImage" destination="0af-Wh-f2W" id="OgD-fj-SLN"/>
                                             <outlet property="movieImg" destination="XE1-c0-njT" id="ToS-W0-u2o"/>
                                             <outlet property="movieLink" destination="7p4-Id-L80" id="Dzk-ut-hzZ"/>
                                             <outlet property="movieReview" destination="50G-wz-al1" id="IeO-uw-ZbY"/>
@@ -92,7 +99,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="E1R-L5-OZu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8T4-VD-eXt"/>
-                            <constraint firstItem="E1R-L5-OZu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FXe-Ob-JDI"/>
+                            <constraint firstItem="E1R-L5-OZu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Exc-lZ-Y6i"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E1R-L5-OZu" secondAttribute="bottom" id="a2Z-UF-TIe"/>
                             <constraint firstAttribute="trailing" secondItem="E1R-L5-OZu" secondAttribute="trailing" id="kay-Cw-oah"/>
                         </constraints>
@@ -275,7 +282,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="imdb_logo" width="240" height="110"/>
+        <image name="SpiritedAway Poster" width="450" height="635"/>
         <image name="movie-border" width="163" height="225"/>
     </resources>
 </document>
